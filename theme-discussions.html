@@ -8,6 +8,8 @@
     <meta name="author" content="Chris Moore">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legend of the Galactic Heroes Hub</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLTSZ4DFR5"></script>
@@ -18,44 +20,48 @@
     gtag('config', 'G-KLTSZ4DFR5');
 </script>
 <body>
-    <img src="assets/icon.png" alt="LoGH Hub Icon" height="88" width="88">
-    <div>
-        <a href = index.html>Home</a>
-        <a href = char-analyses.html>Character Analyses</a>
-        <a href = theme-discussions.html>Theme Discussions</a>
-        <a href = quotes.html>Quotes</a>
-        <a href = polls.html>Polls</a>
+    <div class="nav">
+        <img src="assets/icon.png" alt="LoGH Hub Icon" height="64" width="64">
+        <p>
+            <a href = index.html>Home</a>
+            <a href = char-analyses.html>Character Analyses</a>
+            <a href = theme-discussions.html>Theme Discussions</a>
+            <a href = quotes.html>Quotes</a>
+            <a href = polls.html>Polls</a>
+        </p>
     </div>
     <section>
         <h1>Theme Discussions</h1>
     </section>
-    <div>
-        <p>
-            This page links to the thematic discussions currently present on the site - those being 
-            <strong>Democracy vs. Autocracy</strong> and <strong>The Consequences of War.</strong>
-        </p>
-        <p>
-            Before jumping in, please keep in mind that:
-        </p>
-        <p>
-            1. At the end of the day, these analyses are my opinions.
-        </p>
-        <p>
-            2. There will be copious spoilers ahead, so be wary.
-        </p>
+    <div class="container">
+        <section class="bodyText">
+            <p>
+                This page links to the thematic discussions currently present on the site - those being 
+                <strong>Democracy vs. Autocracy</strong> and <strong>The Consequences of War.</strong>
+            </p>
+            <p>
+                Before jumping in, please keep in mind that:
+            </p>
+            <p>
+                1. At the end of the day, these analyses are my opinions.
+            </p>
+            <p>
+                2. There will be copious spoilers ahead, so be wary.
+            </p>
+        </section>
     </div>
-    <section>
-        <a href="democracy-autocracy.html">
+    <div class="images">
+        <a href="democracy-autocracy.html" class="imgCaption">
             <img src="assets/mashup-flag.png" alt="The Free Planets Alliance flag merged with the Imperial flag" height="256" width="324">
             <h2>Democracy vs. Autocracy</h2>
         </a>
-    </section>
-    <section>
-        <a href="war.html">
+        <a href="war.html" class="imgCaption">
             <img src="assets/battle.jpg" alt="Imperial ships engaged in battle" height="256" width="324">
             <h2>The Consequences of War</h2>
         </a>
-    </section>
+    </div>
+    <div class="space">
+    </div>
     <footer>
         <p>
             <strong>Legend of the Galactic Heroes Hub | Chris Moore, 2024</strong>

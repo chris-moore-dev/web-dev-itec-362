@@ -8,6 +8,8 @@
     <meta name="author" content="Chris Moore">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legend of the Galactic Heroes Hub</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLTSZ4DFR5"></script>
@@ -18,19 +20,21 @@
     gtag('config', 'G-KLTSZ4DFR5');
 </script>
 <body>
-    <img src="assets/icon.png" alt="LoGH Hub Icon" height="88" width="88">
-    <div>
-        <a href = index.html>Home</a>
-        <a href = char-analyses.html>Character Analyses</a>
-        <a href = theme-discussions.html>Theme Discussions</a>
-        <a href = quotes.html>Quotes</a>
-        <a href = polls.html>Polls</a>
+    <div class="nav">
+        <img src="assets/icon.png" alt="LoGH Hub Icon" height="64" width="64">
+        <p>
+            <a href = index.html>Home</a>
+            <a href = char-analyses.html>Character Analyses</a>
+            <a href = theme-discussions.html>Theme Discussions</a>
+            <a href = quotes.html>Quotes</a>
+            <a href = polls.html>Polls</a>
+        </p>
     </div>
     <section>
         <h1>Polls</h1>
     </section>
-    <section>
-        <form action="/TODO.php">
+    <section class="container">
+        <form action="/TODO.php" class="subContainer">
             <h2>Most Evil Character in LoGH?</h2>
             <input type="radio" id="bishop" name="evil" value="bishop">
             <label for="bishop">Bishop de Villier</label><br>
@@ -44,11 +48,10 @@
             <label for="trunicht">Job Trunicht</label><br>
             <input type="radio" id="falk" name="evil" value="falk">
             <label for="falk">Andrew Falk</label><br>
+            <br>
             <input type="submit" value="Submit">
         </form>
-    </section>
-    <section>
-        <form action="/TODO.php">
+        <form action="/TODO.php" class="subContainer">
             <h2>Best Military Tactician in LoGH?</h2>
             <input type="radio" id="yang" name="tactician" value="yang">
             <label for="yang">Yang Wen-li</label><br>
@@ -66,11 +69,10 @@
             <label for="merkatz">Willibald Joachim von Merkatz</label><br>
             <input type="radio" id="bewcock" name="tactician" value="bewcock">
             <label for="bewcock">Alexandre von Bewcock</label><br>
+            <br>
             <input type="submit" value="Submit">
         </form>
-    </section>
-    <section>
-        <form action="/TODO.php">
+        <form action="/TODO.php" class="subContainer">
             <h2>Best Faction in LoGH?</h2>
             <input type="radio" id="fpa" name="faction" value="fpa">
             <label for="fpa">Free Planets Alliance</label><br>
@@ -86,9 +88,12 @@
             <label for="fezzan">Dominion of Fezzan</label><br>
             <input type="radio" id="terraists" name="faction" value="terraists">
             <label for="terraists">Terraist Church</label><br>
+            <br>
             <input type="submit" value="Submit">
         </form>
     </section>
+    <div class="space">
+    </div>
     <footer>
         <p>
             <strong>Legend of the Galactic Heroes Hub | Chris Moore, 2024</strong>

@@ -1,0 +1,130 @@
+/* Defaults */
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Body content */
+body {
+    font-family: sans-serif;
+    background-color:  #2f2f2f;
+    color: rgb(212, 212, 212);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body p {
+    font-size: 18px;
+    font-weight:100;
+}
+
+.bodyText {
+    background-color: #222223;
+    border-radius: 9px;
+    padding: 1px 20px 1px 20px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+/* Navigation bar */
+.nav {
+    background-color:  #222223;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.nav p {
+    flex-grow: 1;
+    text-align: center;
+    transform: translatex(-32px);
+}
+
+.nav p a {
+    color: #A7A3A3;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.nav p a:hover {
+    color: #474747;
+}
+
+/* Container for <img> and <p> combinations */
+.container {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 20px;
+    margin-right:350px;
+    margin-left:350px;
+}
+
+.subContainer {
+    background-color: #222223;
+    border-radius: 9px;
+    padding: 1px 20px 20px 20px;
+    margin: 0px 10px 0px 10px
+}
+
+/* Add before footer to ensure it stays on page */
+.space {
+    flex-grow: 1;
+}
+
+/* Images */
+.leftImage {
+    margin-right: 20px;
+    object-fit: cover;
+    height: auto;
+}
+
+.rightImage {
+    margin-left: 20px;
+}
+
+.imgCaption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    padding: 20px;
+    text-decoration: none;
+    color: rgb(212, 212, 212);
+}
+
+.imgCaption img {
+    display:block;
+}
+
+.imgCaption:hover {
+    color: #474747;
+}
+
+.images {
+    display: flex;
+    justify-content:center;
+}
+
+/* Footer */
+footer {
+    background-color:  #222223;
+    color: #A7A3A3;
+    text-align: center;
+    padding: 1px 20px 1px 20px;
+    margin-top: 40px;
+}
