@@ -5,7 +5,7 @@ html {
     height: 100%;
 }
 
-/* Body content */
+/* Body content (default background, text properties) */
 body {
     font-family: sans-serif;
     background-color:  #2f2f2f;
@@ -17,17 +17,20 @@ body {
     flex-direction: column;
 }
 
+/* Body paragraph properties */
 body p {
     font-size: 18px;
     font-weight:100;
 }
 
+/* Class to separate body images from <p> elements */
 .bodyText {
     background-color: #222223;
     border-radius: 9px;
     padding: 1px 20px 1px 20px;
 }
 
+/* Headings */
 h1 {
     text-align: center;
     font-weight: bold;
@@ -47,12 +50,14 @@ h2 {
     padding: 10px;
 }
 
-.nav p {
+/* Move the nav bar slightly so the icon doesn't push it off-center */
+#navtext {
     flex-grow: 1;
     text-align: center;
     transform: translatex(-32px);
 }
 
+/* Default nav bar link properties */
 .nav p a {
     color: #A7A3A3;
     text-decoration: none;
@@ -60,6 +65,7 @@ h2 {
     margin: 0 10px;
 }
 
+/* Change color when hovering over nav bar link */
 .nav p a:hover {
     color: #474747;
 }
@@ -73,6 +79,7 @@ h2 {
     margin-left:350px;
 }
 
+/* Container for polls */
 .subContainer {
     background-color: #222223;
     border-radius: 9px;
@@ -80,22 +87,24 @@ h2 {
     margin: 0px 10px 0px 10px
 }
 
-/* Add before footer to ensure it stays on page */
+/* Empty space (added before footer to ensure it always stays on page) */
 .space {
     flex-grow: 1;
 }
 
-/* Images */
+/* Images positioned to the left of text */
 .leftImage {
     margin-right: 20px;
     object-fit: cover;
     height: auto;
 }
 
+/* Images positioned to the right of text */
 .rightImage {
     margin-left: 20px;
 }
 
+/* Images with captions underneath */
 .imgCaption {
     display: flex;
     flex-direction: column;
@@ -111,13 +120,14 @@ h2 {
     display:block;
 }
 
-.imgCaption:hover {
-    color: #474747;
-}
-
 .images {
     display: flex;
     justify-content:center;
+}
+
+/* Change color when hovering over caption link */
+.imgCaption:hover {
+    color: #474747;
 }
 
 /* Footer */
