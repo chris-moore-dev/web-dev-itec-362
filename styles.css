@@ -30,6 +30,17 @@ body p {
     padding: 1px 20px 1px 20px;
 }
 
+/* Quotes */
+.quotes {
+    display: block;
+    margin: 0 auto;
+    background-color: #222223;
+    border-radius: 9px;
+    padding: 1px 20px 25px 20px;
+    align-items: center;
+    text-align: center;
+}
+
 /* Headings */
 h1 {
     text-align: center;
