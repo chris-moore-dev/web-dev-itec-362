@@ -175,8 +175,8 @@ footer {
     margin-top: 3vw;
 }
 
-/* Adaptive design: alter values when viewport < 1280px */
-@media (max-width: 1280px) {
+/* Adaptive design: alter values when phone aspect ratio is detected */
+@media (max-aspect-ratio: 3/2) {
     .container, .images {
         flex-direction: column;
         align-items: center;
@@ -184,7 +184,7 @@ footer {
         margin-bottom: 0;
     }
     .leftImage, .rightImage { 
-        width: 35vw;
+        width: 62vw;
         align-self: center;
         margin-top: 3vw;
         margin-bottom: 3vw;
