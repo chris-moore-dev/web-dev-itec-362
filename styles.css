@@ -1,3 +1,4 @@
+
 /* Defaults */
 html {
     margin: 0;
@@ -20,7 +21,7 @@ body {
 /* Body paragraph properties */
 body p {
     font-size: 18px;
-    font-weight:100;
+    font-weight: 100;
 }
 
 /* Class to separate body images from <p> elements */
@@ -46,6 +47,7 @@ h1 {
     text-align: center;
     font-weight: bold;
     font-size: xx-large;
+    margin: 2vw 3vw 1vw 3vw;
 }
 
 h2 {
@@ -65,7 +67,7 @@ h2 {
 #navtext {
     flex-grow: 1;
     text-align: center;
-    transform: translatex(-32px);
+    transform: translatex(-2vw);
 }
 
 /* Default nav bar link properties */
@@ -85,9 +87,9 @@ h2 {
 .container {
     display: flex;
     align-items: stretch;
-    margin-bottom: 20px;
-    margin-right:350px;
-    margin-left:350px;
+    margin-top: 2vw;
+    margin-right: 16vw;
+    margin-left: 16vw;
 }
 
 /* Container for polls */
@@ -95,7 +97,26 @@ h2 {
     background-color: #222223;
     border-radius: 9px;
     padding: 1px 20px 20px 20px;
-    margin: 0px 10px 0px 10px
+    margin: 0px 10px 0px 10px;
+}
+
+/* Poll forms */
+form {
+    display: grid; 
+    gap: 20px; 
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Button for quotes and polls page */
+.button {
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: sans-serif;
+    color:  #2f2f2f;
+    background-color: rgb(212, 212, 212);
+    font-size: 18px;
+    font-weight: 100;
+    margin: 0 auto;
 }
 
 /* Empty space (added before footer to ensure it always stays on page) */
@@ -105,14 +126,13 @@ h2 {
 
 /* Images positioned to the left of text */
 .leftImage {
-    margin-right: 20px;
-    object-fit: cover;
+    margin-right: 1vw;
     height: auto;
 }
 
 /* Images positioned to the right of text */
 .rightImage {
-    margin-left: 20px;
+    margin-left: 1vw;
 }
 
 /* Images with captions underneath */
@@ -132,6 +152,7 @@ h2 {
 }
 
 .images {
+    margin-top: 1vw;
     display: flex;
     justify-content:center;
 }
@@ -141,11 +162,44 @@ h2 {
     color: #474747;
 }
 
+#column2 {
+    grid-column: 2;
+}
+
 /* Footer */
 footer {
     background-color:  #222223;
     color: #A7A3A3;
     text-align: center;
     padding: 1px 20px 1px 20px;
-    margin-top: 40px;
+    margin-top: 3vw;
+}
+
+/* Adaptive design: alter values when viewport < 1280px */
+@media (max-width: 1280px) {
+    .container, .images {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .leftImage, .rightImage { 
+        width: 35vw;
+        align-self: center;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+    }
+    form {
+        grid-template-columns: repeat(1, 3fr);
+    }
+    h1 {
+        margin: 4vw 3vw;
+    }
+    .bodyText {
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+    }
+    #column2 {
+        grid-column: 1;
+    }
 }

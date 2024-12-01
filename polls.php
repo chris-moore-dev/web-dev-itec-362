@@ -1,3 +1,28 @@
+<?php
+// PHP for poll page - not useful on GitHub Pages, just for testing purposes
+    define('DB_HOST', 'localhost');
+    define('DB_USER', 'root');
+    define('DB_PASS','');
+    define('DB_NAME','dataForm');
+
+    $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+    if($conn->connect_error) {
+        die('Connection Failed' . $conn->connect_error);
+    }
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $evil = $_POST['evil'];
+        $tactician = $_POST['tactician'];
+        $faction = $_POST['faction'];
+        $query = $conn->prepare("INSERT INTO user_poll (mostEvilChar,bestTactician,bestFaction)
+        VALUES (?,?,?)");
+        $query->bind_param('sss', $evil, $tactician, $faction);
+        $query->execute();
+        $conn->close();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,18 +35,18 @@
     <title>Legend of the Galactic Heroes Hub</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="styles.css">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLTSZ4DFR5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-KLTSZ4DFR5');
-    </script>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLTSZ4DFR5"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KLTSZ4DFR5');
+</script>
 <body>
     <div class="nav">
-        <img src="assets/icon.png" alt="LoGH Hub Icon" height="64" width="64">
+        <img src="assets/icon.png" alt="LoGH Hub Icon" height="64vw" width="64vw">
         <p id="navtext">
             <a href = index.html>Home</a>
             <a href = char-analyses.html>Character Analyses</a>
